@@ -3,6 +3,8 @@
 #include <vector>
 #include <queue>
 
+#define MAX 300001
+
 std::priority_queue<int> pq;
 
 struct Jewel{
@@ -31,6 +33,9 @@ void InitBagWeight(int* BagWeight, int BagCount){
     }
 }
 
+Jewel Jewels[300001];
+int BagWeight[300001];
+
 int main(){
     int JewelMaxCount;
     int BagMaxCount;
@@ -39,8 +44,6 @@ int main(){
     int BaginJew = 0;
     long long TotalCost = 0;
     std::cin>>JewelMaxCount>>BagMaxCount;
-    Jewel Jewels[JewelMaxCount];
-    int BagWeight[BagMaxCount];
     InitJewel(Jewels, JewelMaxCount);
     InitBagWeight(BagWeight, BagMaxCount);
 
